@@ -7,9 +7,5 @@ pipeline {
             }
         }
     }
-    post { (1)
-        always { (2)
-            echo 'I will always say Hello again!'
-        }
-    }
+
 }
