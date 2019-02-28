@@ -1,11 +1,13 @@
 pipeline {
-  agent any
-  
-  stages {
-    stage('Build') {
-      steps {
-        sh 'echo "Hello World"'
-      }
+    agent any
+    triggers {
+        cron('* * * ? * *')
     }
-  }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
