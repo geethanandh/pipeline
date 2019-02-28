@@ -1,13 +1,13 @@
 pipeline {
-    agent any
-    triggers {
-        cron('* * * ? * *')
+  agent any
+  stages {
+    stage('Example') {
+      steps {
+        echo 'Hello World'
+      }
     }
-    stages {
-        stage('Example') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-    }
+  }
+  triggers {
+    cron('* * * ? * *')
+  }
 }
